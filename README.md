@@ -5,6 +5,20 @@ filename is `bundle-stats.json`. Commit this file to source control, with each
 new commit and when a new pull request is opened you can easily see how the
 new code affects the size of each chunk.
 
+## Installation
+
+Install with yarn or npm (you might want to save this in `devDependencies` instead of `dependencies`)
+
+```
+yarn add webpack-bundle-summary --dev
+```
+
+or
+
+```
+npm install webpack-bundle-summary --save-dev
+```
+
 ## Usage
 
 ```javascript
@@ -12,6 +26,7 @@ const BundleSummary = require('webpack-bundle-summary')
 
 /// webpack config
 plugins: [
+  // this default `filename` is 'bundle-stats.json'
   new BundleSummary({filename: 'my-bundle-stats.json'})
 ]
 ///
