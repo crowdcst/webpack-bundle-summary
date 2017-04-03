@@ -2,10 +2,9 @@
   "name": "webpack-bundle-summary",
   "version": "0.0.1",
   "description": "See a high level overview of your webpack chunk sizes",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/crowdcst/webpack-bundle-summary",
   "license": "MIT",
-  "main": "index.js",
   "engines": {
     "node": ">= 6"
   }
