@@ -17,7 +17,7 @@ plugins: [
 ///
 ```
 
-That's it. Here is an example `bundle-stats.json`, generated from the (webpack-sandbox)[github.com/crowdcst/webpack-sandbox] project:
+That's it. Here is an example `bundle-stats.json`, generated from the [webpack-sandbox](github.com/crowdcst/webpack-sandbox) project:
 
 ```
 {
