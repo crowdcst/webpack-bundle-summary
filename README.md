@@ -1,5 +1,7 @@
 # Webpack Bundle Summary
 
+[![Build Status](https://travis-ci.org/crowdcst/webpack-bundle-summary.svg?branch=master)](https://travis-ci.org/crowdcst/webpack-bundle-summary)
+
 Generate a JSON file with the name and size of each webpack asset. The default
 filename is `bundle-stats.json`. Commit this file to source control, with each
 new commit and when a new pull request is opened you can easily see how the
