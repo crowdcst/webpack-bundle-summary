@@ -7,5 +7,12 @@
   "license": "MIT",
   "engines": {
     "node": ">= 6"
+  },
+  "scripts": {
+    "test": "standard && NODE_ENV=test jasmine --captureExceptions"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "standard": "^9.0.2"
   }
 }
