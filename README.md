@@ -46,11 +46,10 @@ let options = {
   // a function to filter assetNames if you don't want all
   // assets to be output in the summary file
   // take an asset name and return a boolean
-  // default: undefined
-  filter: function (assetName) {
-    // example: only output the summary for .js files
-    return /\.js/.test(assetName)
-  }
+  // default: only .js files:
+  //      (assetName)  => /\.js/.test(assetName)
+  // set `filter: false` to keep all webpack assets
+  filter: (assetName) => { }
 }
 // webpack config
 plugins: [
