@@ -1,6 +1,6 @@
 {
   "name": "webpack-bundle-summary",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "See a high level overview of your webpack chunk sizes",
   "main": "lib/index.js",
   "repository": "https://github.com/crowdcst/webpack-bundle-summary",
