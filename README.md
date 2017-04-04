@@ -32,21 +32,29 @@ plugins: [
 //
 ```
 
-options
+### Options
 
-```
-options = {
+All are optiona
+
+```javascript
+let options = {
   // the name of the file to output the bundle-summary to
   // default: 'bundle-summary.json'
-  filename: 'my-bundle-summary.json',
+  filename: //string,
+
   // a function to filter assetNames if you don't want all
   // assets to be output in the summary file
   // take an asset name and return a boolean
   // default: undefined
   filter: function (assetName) {
+    // example: only output the summary for .js files
     return /\.js/.test(assetName)
   }
 }
+// webpack config
+plugins: [
+  new BundleSummary(options)
+]
 ```
 
 Here is an example `bundle-summary.json`, generated from the [webpack-sandbox](github.com/crowdcst/webpack-sandbox) project:
