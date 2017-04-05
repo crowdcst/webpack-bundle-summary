@@ -1,6 +1,8 @@
 # Webpack Bundle Summary
 
 [![Build Status](https://travis-ci.org/crowdcst/webpack-bundle-summary.svg?branch=master)](https://travis-ci.org/crowdcst/webpack-bundle-summary)
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+
 
 This plugin generates a JSON file with the name and size of each webpack asset.
 Commit this file to source control so you can easily see how diffs impact
@@ -67,3 +69,7 @@ Here is an example `bundle-summary.json`, generated from the [webpack-sandbox](g
   "main.js": 6639
 }
 ```
+
+[downloads-image]: https://img.shields.io/npm/dt/webpack-bundle-summary.svg
+[npm-image]: https://img.shields.io/npm/v/webpack-bundle-summary.svg
+[npm-url]: https://www.npmjs.com/package/webpack-bundle-summary
