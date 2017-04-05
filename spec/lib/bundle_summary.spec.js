@@ -23,7 +23,7 @@ describe('BundleSummary', function () {
     const bundleSummary = new BundleSummary()
     const mockStats = new MockStats()
 
-    it('should generate the correct summary', function (done) {
+    it('should generate the correct summary and be sorted', function (done) {
       bundleSummary.summarizeStats(mockStats).then(summary => {
         expect(summary).toEqual({
           'main.js': 123,
@@ -31,6 +31,12 @@ describe('BundleSummary', function () {
           '1.js': 1235,
           '$total': 2592
         })
+        expect(Object.keys(summary)).toEqual([
+          '$total',
+          '0.js',
+          '1.js',
+          'main.js'
+        ])
         done()
       })
     })
