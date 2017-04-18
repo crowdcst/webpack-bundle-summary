@@ -26,10 +26,10 @@ describe('BundleSummary', function () {
     it('should generate the correct summary and be sorted', function (done) {
       bundleSummary.summarizeStats(mockStats).then(summary => {
         expect(summary).toEqual({
-          'main.js': 123,
-          '0.js': 1234,
-          '1.js': 1235,
-          '$total': 2592
+          'main.js': '0.1K',
+          '0.js': '1.2K',
+          '1.js': '1.2K',
+          '$total': '2.6K'
         })
         expect(Object.keys(summary)).toEqual([
           '$total',
@@ -93,6 +93,20 @@ describe('BundleSummary', function () {
           bundleSummary.shouldKeepAsset('something.html')
         ).toEqual(true)
       })
+    })
+  })
+
+  describe('formatBytes', function () {
+    it('should round small numbers to 1 decimal', function () {
+      const bundleSummary = new BundleSummary()
+      const size = 123
+      expect(bundleSummary.formatBytes(size)).toEqual('0.1K')
+      expect(size).toEqual(123) // don't mutate the original variable
+    })
+
+    it('should round big numbers to 1 decimal', function () {
+      const bundleSummary = new BundleSummary()
+      expect(bundleSummary.formatBytes(1234565)).toEqual('1234.6K')
     })
   })
 })
